@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGurdian</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            background-color: white;
+        }
+        header, footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        video, audio {
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+            
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            text-align: left;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        form {
+            margin: 20px 0;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="color:blue;">Welcome to Our CyberGurdian Webpage</h1>
+</header>
+
+<div class="container">
+
+    <!-- Audio Element -->
+    <h2>Listen to Our Audio</h2>
+    <audio controls>
+        <source src="Chiké_&_Simi_–_Running_(To_You)_[Official_Video](256k) (1).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Video Element -->
+    <h2>Watch Our Video</h2>
+    <video controls>
+        <source src="Introduction to Cybersecurity.mp4" type="video/mp4" width="1000" height="300">
+        Your browser does not support the video element.
+    </video>
+
+    <!-- Image Embed -->
+    <h2>Our Featured Image</h2>
+    <img src="pngwing.com.png" alt="Featured Image" style="width: 300px;" height="300">
+
+    <!-- Table Embed -->
+    <h2>Sample Data Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ali M Abdalla</td>
+                <td>alimahrez744@gmail.com</td>
+                <td>+254750167136</td>
+            </tr>
+            <tr>
+                <td>Said Abdalla</td>
+                <td>Saidabdalla6980@gmail.com</td>
+                <td>+254792152316</td>
+            </tr>
+            <tr>
+                <td>Mohamed Komora </td>
+                <td>Mohamedkomora@gmail.com</td>
+                <td>+254759458836</td>
+            </tr>
+            <tr>
+                <td>Ummu Abdalla</td>
+                <td>Ummuabdalla98@gmail.com</td>
+                <td>+25410587234</td>   
+            </tr>
+            <tr>
+                <td>Halima Abdalla</td>
+                <td>Halimaabdalla@gmail.com</td>
+                <td>+254750167136</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Registration Form with Validation -->
+    <h2>Registration Form</h2>
+    <form action="/submit_form" method="POST" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+        <br>
+        <input type="submit" value="Register">
+    </form>
+
+    <!-- List Embed -->
+    <h2>Our Services</h2>
+    <ul>
+        <li>Vulnerability Assessment</li>
+        <li>Network security</li>
+        <li>Email security</li>
+        <li>Ransomware Protection</li>
+        <li>Dark Web Monitoring</li>
+    </ul>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Cybergurdian Webpage</p>
+</footer>
+
+<script>
+    function validateForm() {
+        // Add custom validation here if needed
+        let username = document.getElementById('username').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        
+        if (username === "" || email === "" || password === "") {
+            alert("All fields must be filled out!");
+            return false;
+        }
+        
+        return true;
+    }
+</script>
+
+</body>
+</html>
